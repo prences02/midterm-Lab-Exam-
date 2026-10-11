@@ -6,13 +6,13 @@ The `services:` block defines the containers that make on the application. In th
 
 # How Does Nextcloud Find the Database?
 
-The environment variable `MYSQL_HOST=database` tells Nextcloud to connect to the database service named `database`.  The Docker Compose provides a network for the services, allowing the application container to resolve the database service name without needing its IP address.
+The environment variable `MYSQL_HOST=database` tells Nextcloud to connect to the database service named `database`.  The Docker Compose provides an network for the services, allowing the application container to resolve the database service name without needing its IP address.
 
 Other environment variables configure the database name, username, and password so that Nextcloud can connect to MariaDB.
 
 # Docker Run vs. Docker Compose
 
-The `docker run` command is commonly used to create and start a individual container. When the application requires multiple containers, we may need to run several commands and manually configure their connections.
+The `docker run` command is commonly used to create and start a individual container. When the application requires multiple containers, we may need to run several commands and manually configure on their connections.
 
 The `docker-compose up -d` command reads the on `docker-compose.yml` file and starts all the defined services in the background. This makes  a deployment  easier to repeat, manage, and share with other engineers.
 
